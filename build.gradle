@@ -1,0 +1,27 @@
+buildscript {
+    ext {
+        our_group = 'org.sebastiaan.snappy-android'
+        our_version = '0.1.0'
+
+        android_java_version_src = JavaVersion.VERSION_11
+        android_java_version_target = JavaVersion.VERSION_11
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.1'
+        classpath 'com.github.kezong:fat-aar:1.3.8'
+    }
+}
+
+group our_group
+version our_version
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+    delete "${project(":snappy-android").projectDir}/.cxx/"
+}
