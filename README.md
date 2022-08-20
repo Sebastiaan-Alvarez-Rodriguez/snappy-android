@@ -4,8 +4,12 @@ This project can be used as a drop-in replacement for snappy-java.
 
 
 ## Versioning
-Snappy-android versioning scheme follows the versions of the snappy library.
-E.g. Snappy-android `1.1.9` provides snappy library version `1.1.9`.  
+Snappy-android has the following relation with snappy:
+| Snappy protocol version | Snappy-android version(s) |
+| ----------------------- | ------------------------- |
+| 1.1.9                   | 1.1.9, 1.1.10             |
+
+
 Our Java bindings are compiled for Java 11.  
 Our Android bindings are compiled for `minSdk=29, targetSdk=32, compileSdk=32`.
 
@@ -27,7 +31,7 @@ allprojects {
 In your module `build.gradle`:
 ```groovy
 dependencies {
-    implementation 'com.github.Sebastiaan-Alvarez-Rodriguez:snappy-android:1.1.9'
+    implementation 'com.github.Sebastiaan-Alvarez-Rodriguez:snappy-android:1.1.10'
 }
 ```
 
